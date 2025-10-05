@@ -1,0 +1,15 @@
+{"timestamp":"2025-10-05T21:26:19.249184Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-05T21:26:19.252927Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/stock_prices.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-05T21:26:19.667735Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2025-10-05T21:26:19.706036Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/stock_prices.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2025-10-05T21:26:19.948808Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:19.950923Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:19.951468Z","level":"info","event":"Current task name:load_prices_idempotent","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:19.951906Z","level":"info","event":"Dag name:assignment5_stock_prices","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:20.166060Z","level":"info","event":"Snowflake Connector for Python Version: 3.17.4, Python Version: 3.12.11, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36","logger":"snowflake.connector.connection","filename":"connection.py","lineno":521}
+{"timestamp":"2025-10-05T21:26:20.171462Z","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection","filename":"connection.py","lineno":1464}
+{"timestamp":"2025-10-05T21:26:24.973819Z","level":"info","event":"Upserted 64 rows into RAW.ASSIGNMENT_5.","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:25.094886Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-05T21:26:25.138721Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:25.139517Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-05T21:26:25.141705Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load_prices_idempotent>","logger":"task.stdout"}

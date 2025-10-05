@@ -1,0 +1,16 @@
+{"timestamp":"2025-10-05T20:18:28.315954Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-05T20:18:28.318413Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/stock_prices.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-05T20:18:30.225184Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow.sdk._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2025-10-05T20:18:30.243893Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2025-10-05T20:18:30.269760Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/stock_prices.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2025-10-05T20:18:30.712010Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:30.712654Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:30.713245Z","level":"info","event":"Current task name:ensure_objects","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:30.713399Z","level":"info","event":"Dag name:assignment5_stock_prices","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:30.752548Z","level":"info","event":"Snowflake Connector for Python Version: 3.17.4, Python Version: 3.12.11, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36","logger":"snowflake.connector.connection","filename":"connection.py","lineno":521}
+{"timestamp":"2025-10-05T20:18:30.757657Z","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection","filename":"connection.py","lineno":1464}
+{"timestamp":"2025-10-05T20:18:35.847815Z","level":"info","event":"Ensured RAW.ASSIGNMENT_5 exists.","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:36.002089Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-05T20:18:36.028491Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:36.028795Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-05T20:18:36.029939Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ensure_objects>","logger":"task.stdout"}
