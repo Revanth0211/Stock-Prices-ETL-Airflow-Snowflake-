@@ -1,0 +1,37 @@
+{"timestamp":"2025-10-29T00:46:17.325534Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-29T00:46:17.327269Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/elt_session_summary.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-29T00:46:17.710322Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/elt_session_summary.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-10-29T00:46:17.710460Z","level":"warning","event":"The `airflow.operators.python.get_current_context` attribute is deprecated. Please use `'airflow.sdk.get_current_context'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/elt_session_summary.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-10-29T00:46:17.781274Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:17.781665Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:17.781765Z","level":"info","event":"Current task name:run_ctas","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:17.782602Z","level":"info","event":"Dag name:ETL_PIPELINE","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:17.783539Z","level":"info","event":"session_summary","logger":"root","filename":"elt_session_summary.py","lineno":34}
+{"timestamp":"2025-10-29T00:46:17.783782Z","level":"info","event":"SELECT u.*, s.ts\n    FROM raw.user_session_channel u\n    JOIN raw.session_timestamp s ON u.sessionId=s.sessionId\n    ","logger":"root","filename":"elt_session_summary.py","lineno":35}
+{"timestamp":"2025-10-29T00:46:17.807265Z","level":"info","event":"Snowflake Connector for Python Version: 3.17.4, Python Version: 3.12.11, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36","logger":"snowflake.connector.connection","filename":"connection.py","lineno":521}
+{"timestamp":"2025-10-29T00:46:17.807904Z","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection","filename":"connection.py","lineno":1464}
+{"timestamp":"2025-10-29T00:46:21.866225Z","level":"info","event":"CREATE OR REPLACE TABLE analytics.temp_session_summary AS SELECT u.*, s.ts\n    FROM raw.user_session_channel u\n    JOIN raw.session_timestamp s ON u.sessionId=s.sessionId\n    ","logger":"root","filename":"elt_session_summary.py","lineno":41}
+{"timestamp":"2025-10-29T00:46:23.494350Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.497317Z","level":"info","event":"              SELECT sessionId, COUNT(1) AS cnt","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.498422Z","level":"info","event":"              FROM analytics.temp_session_summary","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.501253Z","level":"info","event":"              GROUP BY 1","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.501503Z","level":"info","event":"              ORDER BY 2 DESC","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.501595Z","level":"info","event":"              LIMIT 1","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.797774Z","level":"info","event":"('0a54b19a13b6712dc04d1b49215423d8', 1) 1","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.798975Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800176Z","level":"info","event":"              SELECT COUNT(*) AS dup_cnt","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800379Z","level":"info","event":"              FROM (","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800481Z","level":"info","event":"                SELECT","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800568Z","level":"info","event":"                  sessionId, userId, channel, ts,","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800681Z","level":"info","event":"                  ROW_NUMBER() OVER (","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800759Z","level":"info","event":"                    PARTITION BY sessionId, userId, channel, ts","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800810Z","level":"info","event":"                    ORDER BY sessionId","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800871Z","level":"info","event":"                  ) AS rn","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800923Z","level":"info","event":"                FROM analytics.temp_session_summary","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.800987Z","level":"info","event":"              )","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.801049Z","level":"info","event":"              WHERE rn > 1","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:23.801126Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:24.993483Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-29T00:46:25.048395Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:25.048902Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-29T00:46:25.050973Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): run_ctas>","logger":"task.stdout"}

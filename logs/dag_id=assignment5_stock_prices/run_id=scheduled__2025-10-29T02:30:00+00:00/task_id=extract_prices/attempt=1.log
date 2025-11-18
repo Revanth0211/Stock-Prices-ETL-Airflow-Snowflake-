@@ -1,0 +1,5 @@
+{"timestamp":"2025-10-29T03:13:59.452941Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-29T03:13:59.464903Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/stock_prices.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-29T03:14:02.827642Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow.sdk._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2025-10-29T03:14:03.288944Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2025-10-29T03:14:03.502671Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/stock_prices.py","lineno":7,"logger":"py.warnings"}

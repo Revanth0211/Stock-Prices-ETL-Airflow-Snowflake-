@@ -1,0 +1,19 @@
+[2025-11-18T04:16:30.814+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-18T04:16:30.882+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: build_pinecone_search.process_data scheduled__2025-11-06T00:00:00+00:00 [queued]>
+[2025-11-18T04:16:30.894+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: build_pinecone_search.process_data scheduled__2025-11-06T00:00:00+00:00 [queued]>
+[2025-11-18T04:16:30.894+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-18T04:16:30.915+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): process_data> on 2025-11-06 00:00:00+00:00
+[2025-11-18T04:16:30.974+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=948) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-18T04:16:30.977+0000] {standard_task_runner.py:72} INFO - Started process 1018 to run task
+[2025-11-18T04:16:30.970+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'build_pinecone_search', 'process_data', 'scheduled__2025-11-06T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/Semantic-search-fast-dataset2.py', '--cfg-path', '/tmp/tmplg8sc8ah']
+[2025-11-18T04:16:30.980+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask process_data
+[2025-11-18T04:16:31.097+0000] {task_command.py:467} INFO - Running <TaskInstance: build_pinecone_search.process_data scheduled__2025-11-06T00:00:00+00:00 [running]> on host 14a5d5e6976e
+[2025-11-18T04:16:31.203+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='build_pinecone_search' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-06T00:00:00+00:00'
+[2025-11-18T04:16:31.204+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-18T04:16:31.217+0000] {logging_mixin.py:190} INFO - Wrote 742 paragraphs → /opt/***/data/paragraphs.csv
+[2025-11-18T04:16:31.217+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/data/paragraphs.csv
+[2025-11-18T04:16:31.232+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-18T04:16:31.234+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=build_pinecone_search, task_id=process_data, run_id=scheduled__2025-11-06T00:00:00+00:00, execution_date=20251106T000000, start_date=20251118T041630, end_date=20251118T041631
+[2025-11-18T04:16:31.290+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-18T04:16:31.311+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-18T04:16:31.313+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

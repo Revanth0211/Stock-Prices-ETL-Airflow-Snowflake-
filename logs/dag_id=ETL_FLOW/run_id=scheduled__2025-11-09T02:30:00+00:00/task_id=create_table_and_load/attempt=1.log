@@ -1,0 +1,16 @@
+{"timestamp":"2025-11-09T20:26:47.550715Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-09T20:26:47.557940Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_raw_tables.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-09T20:26:52.621322Z","level":"info","event":"Snowflake Connector for Python Version: 3.17.4, Python Version: 3.12.11, Platform: Linux-6.11.11-linuxkit-aarch64-with-glibc2.36","logger":"snowflake.connector.connection","filename":"connection.py","lineno":521}
+{"timestamp":"2025-11-09T20:26:52.625792Z","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection","filename":"connection.py","lineno":1464}
+{"timestamp":"2025-11-09T20:27:09.340981Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/etl_raw_tables.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-11-09T20:27:09.348898Z","level":"warning","event":"The `airflow.operators.python.get_current_context` attribute is deprecated. Please use `'airflow.sdk.get_current_context'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/etl_raw_tables.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-11-09T20:27:10.465153Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:10.471428Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:10.478582Z","level":"info","event":"Current task name:create_table_and_load","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:10.479251Z","level":"info","event":"Dag name:ETL_FLOW","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:15.010797Z","level":"info","event":"Tables created successfully.","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:15.016801Z","level":"info","event":"Data loaded successfullу.","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:15.007492Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-11-09T20:27:15.475759Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:15.477482Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-11-09T20:27:15.490408Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): create_table_and_load>","logger":"task.stdout"}

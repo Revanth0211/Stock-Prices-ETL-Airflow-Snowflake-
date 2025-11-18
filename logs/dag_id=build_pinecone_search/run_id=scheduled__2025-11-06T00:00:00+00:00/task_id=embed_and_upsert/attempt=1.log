@@ -1,0 +1,30 @@
+[2025-11-18T04:21:26.488+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-18T04:21:26.498+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: build_pinecone_search.embed_and_upsert scheduled__2025-11-06T00:00:00+00:00 [queued]>
+[2025-11-18T04:21:26.503+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: build_pinecone_search.embed_and_upsert scheduled__2025-11-06T00:00:00+00:00 [queued]>
+[2025-11-18T04:21:26.504+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-18T04:21:26.519+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): embed_and_upsert> on 2025-11-06 00:00:00+00:00
+[2025-11-18T04:21:26.553+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1545) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-18T04:21:26.558+0000] {standard_task_runner.py:72} INFO - Started process 1563 to run task
+[2025-11-18T04:21:26.560+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'build_pinecone_search', 'embed_and_upsert', 'scheduled__2025-11-06T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/Semantic-search-fast-dataset2.py', '--cfg-path', '/tmp/tmphvxqs7rp']
+[2025-11-18T04:21:26.563+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask embed_and_upsert
+[2025-11-18T04:21:26.615+0000] {task_command.py:467} INFO - Running <TaskInstance: build_pinecone_search.embed_and_upsert scheduled__2025-11-06T00:00:00+00:00 [running]> on host 14a5d5e6976e
+[2025-11-18T04:21:26.697+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='build_pinecone_search' AIRFLOW_CTX_TASK_ID='embed_and_upsert' AIRFLOW_CTX_EXECUTION_DATE='2025-11-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-06T00:00:00+00:00'
+[2025-11-18T04:21:26.699+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-18T04:21:26.714+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/***/.local/lib/python3.12/site-packages/pinecone_plugins'])
+[2025-11-18T04:21:26.714+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2025-11-18T04:21:26.725+0000] {installation.py:10} INFO - Installing plugin inference into Pinecone
+[2025-11-18T04:21:26.956+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/***/.local/lib/python3.12/site-packages/pinecone_plugins'])
+[2025-11-18T04:21:26.957+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2025-11-18T04:21:26.969+0000] {SentenceTransformer.py:219} INFO - Use pytorch device_name: cpu
+[2025-11-18T04:21:26.969+0000] {SentenceTransformer.py:227} INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-11-18T04:21:32.014+0000] {logging_mixin.py:190} INFO - Upserted 128 vectors [1-128 / 742]
+[2025-11-18T04:21:34.501+0000] {logging_mixin.py:190} INFO - Upserted 128 vectors [129-256 / 742]
+[2025-11-18T04:21:36.221+0000] {logging_mixin.py:190} INFO - Upserted 128 vectors [257-384 / 742]
+[2025-11-18T04:21:38.541+0000] {logging_mixin.py:190} INFO - Upserted 128 vectors [385-512 / 742]
+[2025-11-18T04:21:40.616+0000] {logging_mixin.py:190} INFO - Upserted 128 vectors [513-640 / 742]
+[2025-11-18T04:21:42.662+0000] {logging_mixin.py:190} INFO - Upserted 102 vectors [641-742 / 742]
+[2025-11-18T04:21:42.690+0000] {python.py:240} INFO - Done. Returned value was: Upserted 742 paragraphs into class-demo-idx
+[2025-11-18T04:21:42.722+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-18T04:21:42.723+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=build_pinecone_search, task_id=embed_and_upsert, run_id=scheduled__2025-11-06T00:00:00+00:00, execution_date=20251106T000000, start_date=20251118T042126, end_date=20251118T042142
+[2025-11-18T04:21:42.777+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-18T04:21:42.786+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

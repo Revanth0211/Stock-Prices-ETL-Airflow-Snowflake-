@@ -1,0 +1,22 @@
+[2025-11-18T05:14:09.415+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-18T05:14:09.464+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: build_pinecone_search.create_index manual__2025-11-18T05:13:59.577518+00:00 [queued]>
+[2025-11-18T05:14:09.493+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: build_pinecone_search.create_index manual__2025-11-18T05:13:59.577518+00:00 [queued]>
+[2025-11-18T05:14:09.495+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-18T05:14:09.542+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): create_index> on 2025-11-18 05:13:59.577518+00:00
+[2025-11-18T05:14:09.635+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=6800) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-18T05:14:09.644+0000] {standard_task_runner.py:72} INFO - Started process 6825 to run task
+[2025-11-18T05:14:09.647+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'build_pinecone_search', 'create_index', 'manual__2025-11-18T05:13:59.577518+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/Semantic-search-fast-dataset2.py', '--cfg-path', '/tmp/tmpb_h4rwcx']
+[2025-11-18T05:14:09.666+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask create_index
+[2025-11-18T05:14:09.856+0000] {task_command.py:467} INFO - Running <TaskInstance: build_pinecone_search.create_index manual__2025-11-18T05:13:59.577518+00:00 [running]> on host 14a5d5e6976e
+[2025-11-18T05:14:10.004+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='build_pinecone_search' AIRFLOW_CTX_TASK_ID='create_index' AIRFLOW_CTX_EXECUTION_DATE='2025-11-18T05:13:59.577518+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-18T05:13:59.577518+00:00'
+[2025-11-18T05:14:10.006+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-18T05:14:10.094+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/***/.local/lib/python3.12/site-packages/pinecone_plugins'])
+[2025-11-18T05:14:10.099+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2025-11-18T05:14:10.134+0000] {installation.py:10} INFO - Installing plugin inference into Pinecone
+[2025-11-18T05:14:10.473+0000] {logging_mixin.py:190} INFO - Index ready: semantic-search-fast
+[2025-11-18T05:14:10.482+0000] {python.py:240} INFO - Done. Returned value was: semantic-search-fast
+[2025-11-18T05:14:10.516+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-18T05:14:10.517+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=build_pinecone_search, task_id=create_index, run_id=manual__2025-11-18T05:13:59.577518+00:00, execution_date=20251118T051359, start_date=20251118T051409, end_date=20251118T051410
+[2025-11-18T05:14:10.578+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-18T05:14:10.644+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-18T05:14:10.647+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
